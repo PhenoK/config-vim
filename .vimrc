@@ -162,8 +162,10 @@ let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++17'
 let g:ale_cpp_clang_options = '-Wall -O2 -std=c++17'
 let g:ale_c_cppcheck_options = ''
 let g:ale_cpp_cppcheck_options = ''
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = ''
+" let g:ale_sign_error = '❌'
+let g:ale_sign_error = '✗'
+" let g:ale_sign_warning = ''
+let g:ale_sign_warning = '▲'
 " Cancel ugly pink background
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
@@ -174,7 +176,8 @@ highlight ALEWarningSign ctermfg=11 guifg=#ED6237 guibg=#F5F5F5
 let g:airline#extensions#ale#enabled = 1
 
 " ***YouCompleteMe setting***
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0 
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
