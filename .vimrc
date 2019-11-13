@@ -28,13 +28,15 @@ Plug 'majutsushi/tagbar'
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Load on nothing
 Plug 'SirVer/ultisnips', { 'on': [] }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
-" Load on nothing
-Plug 'Valloric/YouCompleteMe', { 'on': [] }
+" I don't know why 1. BuildYCM function 2. do install.py doesn't work
+"Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --clangd-completer'}
+Plug 'ycm-core/YouCompleteMe', { 'on': [] }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
@@ -176,9 +178,7 @@ highlight ALEWarningSign ctermfg=11 guifg=#ED6237 guibg=#F5F5F5
 let g:airline#extensions#ale#enabled = 1
 
 " ***YouCompleteMe setting***
-"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0 
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 "let g:ycm_add_preview_to_completeopt = 0
@@ -187,10 +187,8 @@ let g:ycm_server_log_level = 'info'
 let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_complete_in_strings=1
-"let g:ycm_key_invoke_completion = '<c-z>'
+"let g:ycm_key_invoke_completion = '<M-j>'
 "set completeopt=menu,menuone
- 
-"noremap <c-z> <NOP>
  
 let g:ycm_semantic_triggers =  {
             \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
